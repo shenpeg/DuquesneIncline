@@ -1,0 +1,157 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<!-- ########################## HEAD ########################### -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Peggy Shen">
+	<meta name="keywords" content="Duquesne Incline, Pittsburgh">
+    <meta name="description" content="Official website of Duquesne Incline">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Duquesne Incline</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/DIlogo.png"/>
+
+    <!-- External Links to CSS and JS-->
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/scripts.js"></script>
+
+</head>
+<!-- ########################## END OF HEAD ########################### -->
+
+
+<!-- ########################## BODY ########################### -->
+<body>
+    <div id="topRow">
+        <header>
+            <img src="images/DIlogo.png" alt="Duquesne Incline Logo">
+            <h1><a href="index.html">Duquesne Incline</a></h1>
+        </header>
+    
+        <nav>
+            <a class="selected" href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="visit.html">Visit</a>
+        </nav>
+    </div>
+
+    <!-- PHOTO GALLERY -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/dicloudyresize.PNG" alt="Duquesne Incline Cloudy Sunset">
+            <div class="text">WELCOME TO DUQUESNE INCLINE!</div>
+        </div>  
+        <div class="mySlides fade">
+            <img src="images/dirainbowresize.PNG" alt="Duquesne Incline Rainbow">
+            <div class="text">WELCOME TO DUQUESNE INCLINE!</div>
+        </div> 
+        <div class="mySlides fade">
+            <img src="images/diviewresize.PNG" alt="Duquesne Incline Nighttime"/>
+            <div class="text">WELCOME TO DUQUESNE INCLINE!</div>
+        </div>  
+        <div class="mySlides fade">
+            <img src="images/disnowyresize.PNG" alt="Duquesne Incline Snowy Weather">
+            <div class="text">WELCOME TO DUQUESNE INCLINE!</div>
+        </div>   
+        <div class="mySlides fade">
+            <img src="images/difbresized.PNG" alt="Duquesne Incline Cloudy View">
+            <div class="text">WELCOME TO DUQUESNE INCLINE!</div>
+        </div> 
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div><br>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+            function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+
+    <!-- POLAROID LINKS TO PAGES -->
+    <div class="polaroid">
+        <a href="visit.html"><img src="images/DIcloseup.png" alt="Photo of Incline Train"></a>
+        <div class="textContainer">
+            <p>Visit Us Today</p>
+        </div>
+    </div>
+    <div class="polaroid">
+        <a href="about.html"><img src="images/DI1900.png" alt="Photo of Incline in the 1900s"></a>
+        <div class="textContainer">
+            <p>Learn About Us</p>
+        </div>
+    </div>
+    <div class="polaroid">
+        <a href="contact.html"><img src="images/DIbuilding.png" alt="Photo of Incline Building"></a>
+        <div class="textContainer">
+            <p>Give Us a Call</p>
+        </div>
+    </div>
+
+    
+    <div id="infoSidebar">
+        <img src="images/PAdestinationaward.png" alt="1999 PA Destination of the Day Award"
+        title="1999 PA Destination of the Day Award"><br>
+
+        <iframe width="500" height="315" src="https://www.youtube-nocookie.com/embed/bSLvrz5GraI" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+        clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div><br>
+
+
+    <footer>
+        <hr/>
+        <div id="footerImage">
+            <img src="images/DIlogo.png" alt="Duquesne Incline Logo">
+        </div>
+        <!-- icons from https://www.iconsdb.com/ -->
+        <a href="mailto:duq.incline@duquesneincline.org"><img src="images/email-16.png" alt="Email Icon"></a>
+        <a href="images/DImap.pdf" target="blank"><img src="images/pin-16.png" alt="Location Pin Icon"></a>
+        <a href="https://instagram.com/explore/tags/duquesneincline/" target="blank"><img src="images/instagram-16.png" alt="Instagram Icon"></a>
+        <a href="https://facebook.com/TheDuquesneIncline" target="blank"><img src="images/facebook-16.png" alt="Facebook Icon"></a>
+        <a href="https://youtu.be/ve3KMUIlSGk" target="blank"><img src="images/youtube-16.png" alt="YouTube Icon"></a>
+        <a href="https://en.wikipedia.org/wiki/Duquesne_Incline" target="blank"><img src="images/wikipedia-16.png" alt="Wikipedia Icon"></a>
+        <br> &copy; 2021 Duquesne Incline. All Rights Reserved.<br>
+        Website for IS Milieux. <a href="citations.html">See citations here.</a><br>
+    </footer>
+</body>
+
+</html>
